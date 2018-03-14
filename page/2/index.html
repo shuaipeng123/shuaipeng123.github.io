@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Instruction,PHP," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -94,18 +94,16 @@
 
 
 
-<meta name="description" content="PHP: Hypertext Preprocessor">
-<meta name="keywords" content="Instruction,PHP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="PHP">
-<meta property="og:url" content="http://yoursite.com/2018/02/26/PHP/index.html">
+<meta name="description" content="Just a Programmer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shuai&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Shuai&#39;s Blog">
-<meta property="og:description" content="PHP: Hypertext Preprocessor">
+<meta property="og:description" content="Just a Programmer">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-28T05:21:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP">
-<meta name="twitter:description" content="PHP: Hypertext Preprocessor">
+<meta name="twitter:title" content="Shuai&#39;s Blog">
+<meta name="twitter:description" content="Just a Programmer">
 
 
 
@@ -134,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/26/PHP/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title>PHP | Shuai's Blog</title>
+  <title>Shuai's Blog</title>
   
 
 
@@ -165,7 +163,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/26/PHP/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/24/testing-the-image/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shuai Peng">
@@ -280,7 +280,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PHP</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/24/testing-the-image/" itemprop="url">浅谈RussVSKD</a></h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-26T23:00:43-05:00">
-                2018-02-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-24T18:51:31-05:00">
+                2018-02-24
               </time>
             
 
@@ -330,8 +332,16 @@
       
 
       
-        <h2 id="PHP-Hypertext-Preprocessor"><a href="#PHP-Hypertext-Preprocessor" class="headerlink" title="PHP: Hypertext Preprocessor"></a>PHP: Hypertext Preprocessor</h2><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;? php</span><br><span class="line"><span class="variable">$txt</span>=<span class="string">"String"</span>;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line"><span class="variable">$x</span>=5;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">myTest</span></span>()&#123;</span><br><span class="line">	global <span class="variable">$y</span>=10;//will change the global var y</span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"&lt;p&gt;&lt;p&gt;"</span>;</span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"x is : <span class="variable">$x</span>"</span>;</span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">	<span class="variable">$GLOBALS</span>[<span class="string">'y'</span>]=<span class="variable">$GLOBALS</span>[<span class="string">'x'</span>];</span><br><span class="line">	&#125;</span><br><span class="line">myTest();</span><br><span class="line"><span class="keyword">function</span> myTest()</span><br><span class="line">&#123;</span><br><span class="line">    static <span class="variable">$x</span>=0;</span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$x</span>;</span><br><span class="line">    <span class="variable">$x</span>++;</span><br><span class="line">&#125;</span><br><span class="line">class Car</span><br><span class="line">&#123;</span><br><span class="line">  var <span class="variable">$color</span>;</span><br><span class="line">  <span class="keyword">function</span> Car(<span class="variable">$color</span>=<span class="string">"green"</span>) &#123;</span><br><span class="line">    <span class="variable">$this</span>-&gt;color = <span class="variable">$color</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">function</span> <span class="function"><span class="title">what_color</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> <span class="variable">$this</span>-&gt;color;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">define(<span class="string">"GREETING"</span>, <span class="string">"welcome to shuai.com"</span>);</span><br><span class="line"><span class="variable">$cars</span>=array(<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>,<span class="string">"Toyota"</span>);</span><br><span class="line"><span class="variable">$age</span>=array(<span class="string">"Peter"</span>=&gt;<span class="string">"35"</span>,<span class="string">"Ben"</span>=&gt;<span class="string">"37"</span>,<span class="string">"Joe"</span>=&gt;<span class="string">"43"</span>);</span><br><span class="line"></span><br><span class="line">//superglobals using <span class="built_in">echo</span> <span class="variable">$_SERVER</span>[<span class="string">'PHP_SELF'</span>]</span><br><span class="line">&lt;form method=<span class="string">"post"</span> action=<span class="string">"&lt;?php echo <span class="variable">$_SERVER</span>['PHP_SELF'];?&gt;"</span>&gt;</span><br><span class="line">Name: &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"fname"</span>&gt;</span><br><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">"submit"</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;?php </span><br><span class="line"><span class="variable">$name</span> = <span class="variable">$_REQUEST</span>[<span class="string">'fname'</span>]; </span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$name</span>; </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+        
+          <p><img src="/2018/02/24/testing-the-image/russ_vs_kd.gif" alt=""><br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/24/testing-the-image/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -346,42 +356,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Instruction/" rel="tag"># Instruction</a>
-          
-            <a href="/tags/PHP/" rel="tag"># PHP</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/26/AngularJS/" rel="next" title="AngularJS">
-                <i class="fa fa-chevron-left"></i> AngularJS
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/27/web-tech/" rel="prev" title="web-tech">
-                web-tech <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -391,11 +373,138 @@
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/I-love-it/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shuai Peng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shuai's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/23/I-love-it/" itemprop="url">Recommended theme Next in Hexo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-23T17:24:44-05:00">
+                2018-02-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Welcome-to-my-Next-theme-instruction"><a href="#Welcome-to-my-Next-theme-instruction" class="headerlink" title="Welcome to my Next theme instruction."></a>Welcome to my Next theme instruction.</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/23/I-love-it/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -403,10 +512,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -427,17 +532,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -514,22 +610,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-Hypertext-Preprocessor"><span class="nav-number">1.</span> <span class="nav-text">PHP: Hypertext Preprocessor</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -655,10 +735,10 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-
+  
 
   
 
