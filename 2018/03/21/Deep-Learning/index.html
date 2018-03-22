@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Latex," />
+  <meta name="keywords" content="Instruction,Deep Learning," />
 
 
 
@@ -94,18 +94,20 @@
 
 
 
-<meta name="description" content="LaTex is fun">
-<meta name="keywords" content="Latex">
+<meta name="description" content="DL is fun">
+<meta name="keywords" content="Instruction,Deep Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Latex">
-<meta property="og:url" content="http://yoursite.com/2018/03/14/Latex/index.html">
+<meta property="og:title" content="Deep_Learning">
+<meta property="og:url" content="http://yoursite.com/2018/03/21/Deep-Learning/index.html">
 <meta property="og:site_name" content="Shuai&#39;s Blog">
-<meta property="og:description" content="LaTex is fun">
+<meta property="og:description" content="DL is fun">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-14T04:14:58.000Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/21/Deep-Learning/softmax.jpg">
+<meta property="og:updated_time" content="2018-03-22T03:29:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Latex">
-<meta name="twitter:description" content="LaTex is fun">
+<meta name="twitter:title" content="Deep_Learning">
+<meta name="twitter:description" content="DL is fun">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/21/Deep-Learning/softmax.jpg">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/14/Latex/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/21/Deep-Learning/"/>
 
 
 
 
 
-  <title>Latex | Shuai's Blog</title>
+  <title>Deep_Learning | Shuai's Blog</title>
   
 
 
@@ -263,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/Latex/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/Deep-Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shuai Peng">
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Latex</h1>
+          <h1 class="post-title" itemprop="name headline">Deep_Learning</h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-14T00:06:44-04:00">
-                2018-03-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-21T22:55:48-04:00">
+                2018-03-21
               </time>
             
 
@@ -330,8 +332,14 @@
       
 
       
-        <h2 id="LaTex-is-fun"><a href="#LaTex-is-fun" class="headerlink" title="LaTex is fun"></a>LaTex is fun</h2><a id="more"></a>
-<p>Things to notice:<br>1:<br>    use toolbar to close pdf viewer<br>2:<br>    pdf file update at the same time<br>3:<br>    () weird symbol to cover math expression<br>4:<br>    operator symbol <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols" target="_blank" rel="noopener">link</a><br>5:<br>    Use of math symbols and equations:<a href="https://kogler.wordpress.com/2008/03/21/latex-use-of-math-symbols-formulas-and-equations/" target="_blank" rel="noopener">link</a></p>
+        <h2 id="DL-is-fun"><a href="#DL-is-fun" class="headerlink" title="DL is fun"></a>DL is fun</h2><a id="more"></a>
+<p>深度学习模型的训练方式<br> 当有好几十个特征共同影响价格的时候，自然就会涉及权重分配的问题，例如有一些对房价是主要正权重的，例如地段、面积等，也有一些是负权重的，例如房龄等。</p>
+<p>（1）初始化权重计算<br> 那么，第一个步其实是给这些特征加一个权重值，但是，最开始我们根本不知道这些权重值是多少？怎么办呢？不管那么多了，先给它们随机赋值吧。随机赋值，最终计算出来的估算房价肯定是不准确的，例如，它可能将价值100万的房子，计算成了10万。</p>
+<p>（2）损失函数<br> 因为现在模型的估值和实际估值差距比较大，于是，我们需要引入一个评估“不准确”程度的衡量角色，也就是损失（loss）函数，它是衡量模型估算值和真实值差距的标准，损失函数越小，则模型的估算值和真实值的察觉越小，而我们的根本目的，就是降低这个损失函数。让刚刚的房子特征的模型估算值，逼近100万的估算结果。</p>
+<p>（3）模型调整<br> 通过梯度下降和反向传播，计算出朝着降低损失函数的方向调整权重参数。举一个不恰当的比喻，我们给面积增加一些权重，然后给房子朝向减少一些权重（实际计算方式，并非针对单个个例特征的调整），然后损失函数就变小了。</p>
+<p>（4）循环迭代<br> 调整了模型的权重之后，就可以又重新取一批新的样本数据，重复前面的步骤，经过几十万次甚至更多的训练次数，最终估算模型的估算值逼近了真实值结果，这个模型的则是我们要的“函数”。</p>
+<p> 准备数据-&gt;设置模型-&gt;设置损失函数-&gt;真实训练运算-&gt;验证结果</p>
+<p> <img src="/2018/03/21/Deep-Learning/softmax.jpg" alt=""><br>  公式中的i代表需要预测的数字（8），代表预测数字为8的情况下，784个特征的不同权重值，代表8的偏置量（bias），X则是该图片784个特征的值。通过上述计算，我们则可以获得证明该图片是8的证据（evidence）的总和，softmax函数可以把这些证据转换成概率 y。</p>
 
       
     </div>
@@ -349,7 +357,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Latex/" rel="tag"># Latex</a>
+            <a href="/tags/Instruction/" rel="tag"># Instruction</a>
+          
+            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
           
         </div>
       
@@ -362,8 +372,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/13/hexo/" rel="next" title="hexo">
-                <i class="fa fa-chevron-left"></i> hexo
+              <a href="/2018/03/14/Latex/" rel="next" title="Latex">
+                <i class="fa fa-chevron-left"></i> Latex
               </a>
             
           </div>
@@ -371,10 +381,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/21/Deep-Learning/" rel="prev" title="Deep_Learning">
-                Deep_Learning <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -523,7 +529,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LaTex-is-fun"><span class="nav-number">1.</span> <span class="nav-text">LaTex is fun</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DL-is-fun"><span class="nav-number">1.</span> <span class="nav-text">DL is fun</span></a></li></ol></div>
             
 
           </div>
