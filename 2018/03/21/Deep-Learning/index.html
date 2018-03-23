@@ -103,7 +103,7 @@
 <meta property="og:description" content="DL is fun">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2018/03/21/Deep-Learning/softmax.jpg">
-<meta property="og:updated_time" content="2018-03-22T03:29:24.000Z">
+<meta property="og:updated_time" content="2018-03-23T02:47:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deep_Learning">
 <meta name="twitter:description" content="DL is fun">
@@ -340,6 +340,18 @@
 <p>（4）循环迭代<br> 调整了模型的权重之后，就可以又重新取一批新的样本数据，重复前面的步骤，经过几十万次甚至更多的训练次数，最终估算模型的估算值逼近了真实值结果，这个模型的则是我们要的“函数”。</p>
 <p> 准备数据-&gt;设置模型-&gt;设置损失函数-&gt;真实训练运算-&gt;验证结果</p>
 <p> <img src="/2018/03/21/Deep-Learning/softmax.jpg" alt=""><br>  公式中的i代表需要预测的数字（8），代表预测数字为8的情况下，784个特征的不同权重值，代表8的偏置量（bias），X则是该图片784个特征的值。通过上述计算，我们则可以获得证明该图片是8的证据（evidence）的总和，softmax函数可以把这些证据转换成概率 y。</p>
+<p>NaN problem:<br>为了规避NaN的问题，当数值过大，在一些数学指数和除法的浮点数运算中，有可能得到一个无穷大的数值，或者其他溢出的情形</p>
+<p>编码方式NaN != NaN来检测自己的训练过程中，是否出现的NaN</p>
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p>f(x) = x[0] + 2 * x[1] + 4<br>同样的如果我们要求f(x) = 0处，x[0]与x[1]的值，也可以通过求error函数的最小值来间接求f(x)的解。跟一维函数唯一不同的是，要分别对x[0]与x[1]进行求导。在数学上叫做偏导数：</p>
+<p>保持x[1]不变，对x[0]进行求导，即f(x)对x[0]的偏导数</p>
+<p>保持x[0]不变，对x[1]进行求导，即f(x)对x[1]的偏导数</p>
+<h2 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h2><p><a href="https://www.cnblogs.com/charlotte77/p/5629865.html" target="_blank" rel="noopener">link</a></p>
+<h2 id="Maximum-Likelihood-Estimation"><a href="#Maximum-Likelihood-Estimation" class="headerlink" title="Maximum Likelihood Estimation"></a>Maximum Likelihood Estimation</h2><p><a href="https://blog.csdn.net/zengxiantao1994/article/details/72787849" target="_blank" rel="noopener">link</a></p>
+<h2 id="negative-log-likelihood"><a href="#negative-log-likelihood" class="headerlink" title="negative log likelihood"></a>negative log likelihood</h2><p>在机器学习中，都习惯用优化算法求最小值，所以通常用的是负对数似然（Negative Log-Likelihood，NLL）：</p>
+<p>因为概率总是小等于1，所以NLL的值总是大于0<br><a href="http://book.51cto.com/art/201711/558195.htm" target="_blank" rel="noopener">link</a></p>
+<h2 id="单层神经网络（感知器）"><a href="#单层神经网络（感知器）" class="headerlink" title="单层神经网络（感知器）"></a>单层神经网络（感知器）</h2><p>1958年，计算科学家Rosenblatt提出了由两层神经元组成的神经网络。他给它起了一个名字–“感知器”（Perceptron）（有的文献翻译成“感知机”，下文统一用“感知器”来指代）。</p>
+<h2 id="两层神经网络（多层感知器）"><a href="#两层神经网络（多层感知器）" class="headerlink" title="两层神经网络（多层感知器）"></a>两层神经网络（多层感知器）</h2><p>，Rumelhar和Hinton等人提出了反向传播（Backpropagation，BP）算法，解决了两层神经网络所需要的复杂计算量问题，从而带动了业界使用两层神经网络研究的热潮</p>
+<h2 id="RNN-VS-CNN-VS-NN-VS-LSMT-VS-Deep-Residual-Learning"><a href="#RNN-VS-CNN-VS-NN-VS-LSMT-VS-Deep-Residual-Learning" class="headerlink" title="RNN VS CNN VS NN VS LSMT VS Deep Residual Learning"></a>RNN VS CNN VS NN VS LSMT VS Deep Residual Learning</h2><p><a href="https://www.zhihu.com/question/34681168" target="_blank" rel="noopener">link</a></p>
 
       
     </div>
@@ -529,7 +541,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DL-is-fun"><span class="nav-number">1.</span> <span class="nav-text">DL is fun</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DL-is-fun"><span class="nav-number">1.</span> <span class="nav-text">DL is fun</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降"><span class="nav-number">2.</span> <span class="nav-text">梯度下降</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反向传播"><span class="nav-number">3.</span> <span class="nav-text">反向传播</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maximum-Likelihood-Estimation"><span class="nav-number">4.</span> <span class="nav-text">Maximum Likelihood Estimation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#negative-log-likelihood"><span class="nav-number">5.</span> <span class="nav-text">negative log likelihood</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单层神经网络（感知器）"><span class="nav-number">6.</span> <span class="nav-text">单层神经网络（感知器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两层神经网络（多层感知器）"><span class="nav-number">7.</span> <span class="nav-text">两层神经网络（多层感知器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RNN-VS-CNN-VS-NN-VS-LSMT-VS-Deep-Residual-Learning"><span class="nav-number">8.</span> <span class="nav-text">RNN VS CNN VS NN VS LSMT VS Deep Residual Learning</span></a></li></ol></div>
             
 
           </div>
